@@ -1,0 +1,8 @@
+This is the Arduino file to control the hand.
+This software is based on the Adafruti 16 channel Servo Driver,
+available at https://www.adafruit.com/product/815.
+
+Moveover, it relies on the Rosserial ROS package http://wiki.ros.org/rosserial
+
+To use the attached Makefile to program the Arduino, please refer to 
+github.com/WeAreLeka/Arduino-Makefile
