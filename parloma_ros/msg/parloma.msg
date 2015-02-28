@@ -1,0 +1,11 @@
+float32 up
+float32 mid
+float32 down
+uint8 thumb_ad
+uint8 index_ad
+uint8 middle_ad
+uint8 thumb
+uint8 index
+uint8 middle
+uint8 ring
+uint8 pinky
