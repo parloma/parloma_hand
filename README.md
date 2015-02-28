@@ -19,6 +19,8 @@ Videos
 ============
 http://youtu.be/GS6_jwnSgWA (test with the 3d printed hand, no wrist)
 
+http://youtu.be/jVMAGIkViyA (first tests of the wrist)
+
 CAD Files
 ============
 http://www.thingiverse.com/parloma
