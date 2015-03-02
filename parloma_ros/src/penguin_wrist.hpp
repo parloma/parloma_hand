@@ -34,7 +34,7 @@
 #ifndef PENGUIN_WRIST_HPP
 #define PENGUIN_WRIST_HPP
 
-#include <Eigen/Core>
+#include <eigen3/Eigen/Core>
 
 class PenguinWrist {
   private:

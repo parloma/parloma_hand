@@ -12,7 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+# find_package(Eigen REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -95,6 +95,7 @@ catkin_package(
 # include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  # ${EIGEN3_INCLUDE_DIR}
 )
 
 ## Declare a cpp library
@@ -103,11 +104,11 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-add_executable(move_hand src/move_hand.cpp src/parloma_wrist.cpp)
+add_executable(move_hand src/move_hand.cpp src/penguin_wrist.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(parloma_ros_node parloma_ros_generate_messages_cpp)
+add_dependencies(move_hand parloma_ros_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(move_hand ${catkin_LIBRARIES})
