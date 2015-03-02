@@ -28,7 +28,7 @@ Contributors:
 #include <parloma_ros/parloma.h>
 
 ros::NodeHandle node;
-penguin_ros::penguin p_msg;
+parloma_ros::parloma p_msg;
 
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 
@@ -53,7 +53,7 @@ void write_pose(int servo, int pos) {
 }
 
 
-void penguin_cb(const penguin_ros::penguin & msg) {
+void parloma_cb(const parloma_ros::parloma & msg) {
   // wrist 
   int cmd_up =       (int)msg.up              * 2   + 90 ;
   int cmd_middle =  ((int)msg.mid + 120  ) * 2   + 90 ;
@@ -73,7 +73,7 @@ void penguin_cb(const penguin_ros::penguin & msg) {
   write_pose(middle_ad, msg.middle_ad);
 }
 
-ros::Subscriber<penguin_ros::penguin> sub("penguin_msgs", &penguin_cb);
+ros::Subscriber<parloma_ros::parloma> sub("parloma_msgs", &parloma_cb);
 
 void setup () {
   init_servo();
