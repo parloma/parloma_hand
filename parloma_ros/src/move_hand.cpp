@@ -28,7 +28,7 @@
 
 
 #include "ros/ros.h"
-#include <penguin_ros/penguin.h>
+#include <parloma_ros/parloma.h>
 #include "penguin_wrist.hpp"
 #include "math.h"
 
@@ -39,9 +39,9 @@ int main(int argc, char **argv)
 {
   PenguinWrist penguin;
 
-  ros::init(argc, argv, "penguin");
+  ros::init(argc, argv, "parloma_node");
   ros::NodeHandle n;
-  ros::Publisher pub = n.advertise<penguin_ros::penguin>("penguin_msgs", 1000);
+  ros::Publisher pub = n.advertise<parloma_ros::parloma>("parloma_msgs", 1000);
 
   ros::Rate loop_rate(30);
 
@@ -50,7 +50,7 @@ int main(int argc, char **argv)
   int i = 0;
   while (ros::ok() ){
 
-    penguin_ros::penguin msg;
+    parloma_ros::parloma msg;
 
     msg.thumb   =  atoi(argv[1]);
     msg.index   =  atoi(argv[2]);
