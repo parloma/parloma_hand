@@ -25,7 +25,7 @@ Contributors:
 
 // ROS
 #include <ros.h>
-#include <penguin_ros/penguin.h>
+#include <parloma_ros/penguin.h>
 
 ros::NodeHandle node;
 penguin_ros::penguin p_msg;
