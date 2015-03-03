@@ -7,8 +7,14 @@ available at https://www.adafruit.com/product/815.
 
 Moveover, it relies on the Rosserial ROS package http://wiki.ros.org/rosserial
 
+Makefile
+==
+
 To use the attached Makefile to program the Arduino, please refer to 
-github.com/WeAreLeka/Arduino-Makefile
+https://github.com/WeAreLeka/Arduino-Makefile
+
+You need also to edit the makefile in order to match your platform.
+The makefile here attached has been test with Mac OS X (Mavericks).
 
 Usage
 ==
