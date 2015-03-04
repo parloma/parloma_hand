@@ -18,8 +18,13 @@
 % Use nested function to pass parameters q1 to the FK equations system
 
 function [x,fval] = FKPenguinEquations(RPY0,q1alto,q1medio,q1basso)
-
-    options = optimoptions('fsolve','Display','iter'); % Option to display output
+    
+    % Compatibility with matlab R2012a
+    options = optimset('Display','iter', 'Algorithm', 'trust-region-dogleg')
+    
+    
+    % Works only with matlab >= R2013a 
+    % options = optimoptions('fsolve','Display','iter');
     [x,fval] = fsolve(@FKPenguinEqns,RPY0,options); % Call solver
 
     function f = FKPenguinEqns(RPY_)
